@@ -19,3 +19,12 @@ budget_csv = os.path.join('C:\\Users\\loren\\Desktop\\python-challenge\\PyBank\\
 #open the csv
 with open (budget_csv) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
+    #print(csvreader)
+
+#read header row first
+    csvheader = next(csvreader)
+    #print(f'csv header: {csvheader}')
+
+#read each row after the header
+    #for row in csvreader:
+        #print(row)
