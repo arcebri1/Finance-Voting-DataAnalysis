@@ -44,16 +44,16 @@
 import csv
 
 total_months = 0
+total_profit_and_losses = 0
 
 with open('C:\\Users\\loren\\Desktop\\python-challenge\\PyBank\\Resources\\budget_data.csv', 'r') as csvfile:
     reader = csv.DictReader(csvfile)
     
     for row in reader:
-       #total_months = row{'Date'}
-    #print(total_months)
-        total_months = total_months + 1
-    
-print(total_months)
+        #total_months = total_months + 1
+        total_profit_and_losses = total_profit_and_losses + int(row['Profit/Losses'])
+#print(total_months)
+print(total_profit_and_losses)
 
 
 
