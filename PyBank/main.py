@@ -43,11 +43,19 @@
 
 import csv
 
-with open('C:\\Users\\loren\\Desktop\\python-challenge\\PyBank\\Resources\\budget_data.csv', 'r') as csvfile:
-    csv_dict_reader = csv.DictReader(csvfile)
+total_months = 0
 
-    for row in csv_dict_reader:
-        print(str(len(row['Date'])))
+with open('C:\\Users\\loren\\Desktop\\python-challenge\\PyBank\\Resources\\budget_data.csv', 'r') as csvfile:
+    reader = csv.DictReader(csvfile)
+    
+    for row in reader:
+       #total_months = row{'Date'}
+    #print(total_months)
+        total_months = total_months + 1
+    
+print(total_months)
+
+
 
 
 
