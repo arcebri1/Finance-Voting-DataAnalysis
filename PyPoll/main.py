@@ -17,7 +17,7 @@ import os
 #import module to read csv files
 import csv
 
-#declare variable
+#declare variables
 total_votes = 0
 votes_for_Correy = 0
 votes_for_Khan = 0
@@ -62,10 +62,30 @@ percent_of_votes_for_Khan = round((votes_for_Khan/total_votes)*100)
 percent_of_votes_for_Li = round((votes_for_Li/total_votes)*100)
 #print(percent_of_votes_for_Li)
 percent_of_votes_for_OTooley = round((votes_for_OTooley/total_votes)*100)
-print(percent_of_votes_for_OTooley)
+#print(percent_of_votes_for_OTooley)
+
+#create a function of the max of votes of each candidate to obtain the winner. We will then use an if statement to declare the winner
+winner = max(votes_for_Correy, votes_for_Khan, votes_for_Li, votes_for_OTooley)
+if winner == votes_for_Correy:
+    winner = "Correy"
+elif winner == votes_for_Khan:
+    winner = "Khan"
+elif winner == votes_for_Li:
+    winner = "Li"
+else:
+    winner = "O'Tooley"
+#print(winner)
+
+print("Election Results")
+print("--------------------")
+print(f"Total Votes: {total_votes}") 
+print("---------------------")
+print(f"Khan: {percent_of_votes_for_Khan}% ({votes_for_Khan}) ")
+print(f"Correy: {percent_of_votes_for_Correy}% ({votes_for_Correy}) ")
+print(f"Li: {percent_of_votes_for_Li}% ({votes_for_Li}) ")
+print(f"O'Tooley: {percent_of_votes_for_OTooley}% ({votes_for_OTooley}) ")
+print('----------------------')
+print(f"Winner: {winner}")
+print('----------------------')
 
 
-#print(percent_of_votes_for_Correy)
-#we need to make the lists for the candidates and their votes so it is easier to find the winner
-
-    #print(votes_for_OTooley)
