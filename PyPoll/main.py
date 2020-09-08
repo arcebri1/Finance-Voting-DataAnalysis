@@ -54,10 +54,18 @@ with open (election_csv, newline='') as csvfile:
         else: #row[2] == "O'Tooley":
             votes_for_OTooley = votes_for_OTooley + 1
 
-# calculating the percent of votes for each candidate
-percent_of_votes_for_Correy = (votes_for_Correy/total_votes)*100
-print(percent_of_votes_for_Correy)
-#we need to make the lists for the candidates and their votes so it is easier to find the winner
+# calculate the percent of votes for each candidate
+percent_of_votes_for_Correy = round((votes_for_Correy/total_votes)*100)
+#print(percent_of_votes_for_Correy)
+percent_of_votes_for_Khan = round((votes_for_Khan/total_votes)*100)
+#print(percent_of_votes_for_Khan)
+percent_of_votes_for_Li = round((votes_for_Li/total_votes)*100)
+#print(percent_of_votes_for_Li)
+percent_of_votes_for_OTooley = round((votes_for_OTooley/total_votes)*100)
+print(percent_of_votes_for_OTooley)
 
+
+#print(percent_of_votes_for_Correy)
+#we need to make the lists for the candidates and their votes so it is easier to find the winner
 
     #print(votes_for_OTooley)
