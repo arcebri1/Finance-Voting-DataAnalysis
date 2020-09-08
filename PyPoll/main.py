@@ -1,17 +1,3 @@
-#import os
-#import csv
-
-#total_votes = 0
-
-#with open('C:\\Users\\loren\\Desktop\\python-challenge\\PyPoll\\Resources\\election_data.csv', 'r') as csvfile:
-    #reader = csv.DictReader(csvfile)
-    
-
-    #for row in reader:
-        #print(row)
-        #total_votes = total_votes + 1
-        #print(total_votes)
-
 #import module
 import os
 #import module to read csv files
@@ -24,24 +10,21 @@ votes_for_Khan = 0
 votes_for_Li = 0
 votes_for_OTooley = 0
 
-#path to collect data from excel file
+#path to collect data from csv file
 election_csv = os.path.join('C:\\Users\\loren\\Desktop\\python-challenge\\PyPoll\\Resources\\election_data.csv')
 
-#open the csv
+#open the csv, make sure it is split/read by the correct delimiter: ,
 with open (election_csv, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-    #print(reader)
 
-#skip header row first
+#need to skip header row
     csvheader = next(csvfile)
-    #print(f'csv header: {csvheader}')
 
-#read each row after the header
+#loop through the data to find the results we need (rememnber to indent correctly)
     for row in csvreader:
         total_votes = total_votes + 1
-        #print(total_votes)
 
-#If the name of one of the candidates within row 2 (because we are counting from 0) is found then add them up
+#If the name of one of the candidates,which can be found in row 2 (because we are counting from 0), is found then total up the number of votes they got
         if (row[2] == "Correy"):
             votes_for_Correy = votes_for_Correy + 1
 
@@ -51,20 +34,20 @@ with open (election_csv, newline='') as csvfile:
         elif (row[2] == "Li"):
             votes_for_Li = votes_for_Li + 1
 
-        else: #row[2] == "O'Tooley":
+        else:
             votes_for_OTooley = votes_for_OTooley + 1
 
 # calculate the percent of votes for each candidate
 percent_of_votes_for_Correy = round((votes_for_Correy/total_votes)*100)
-#print(percent_of_votes_for_Correy)
-percent_of_votes_for_Khan = round((votes_for_Khan/total_votes)*100)
-#print(percent_of_votes_for_Khan)
-percent_of_votes_for_Li = round((votes_for_Li/total_votes)*100)
-#print(percent_of_votes_for_Li)
-percent_of_votes_for_OTooley = round((votes_for_OTooley/total_votes)*100)
-#print(percent_of_votes_for_OTooley)
 
-#create a function of the max of votes of each candidate to obtain the winner. We will then use an if statement to declare the winner
+percent_of_votes_for_Khan = round((votes_for_Khan/total_votes)*100)
+
+percent_of_votes_for_Li = round((votes_for_Li/total_votes)*100)
+
+percent_of_votes_for_OTooley = round((votes_for_OTooley/total_votes)*100)
+
+
+#create a function of the max of votes of each candidate to determine who the winner is. We will then use an if statement to declare the winner
 winner = max(votes_for_Correy, votes_for_Khan, votes_for_Li, votes_for_OTooley)
 if winner == votes_for_Correy:
     winner = "Correy"
@@ -74,7 +57,6 @@ elif winner == votes_for_Li:
     winner = "Li"
 else:
     winner = "O'Tooley"
-#print(winner)
 
 #print("Election Results")
 #print("--------------------")
