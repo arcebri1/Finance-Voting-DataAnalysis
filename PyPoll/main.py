@@ -76,16 +76,36 @@ else:
     winner = "O'Tooley"
 #print(winner)
 
-print("Election Results")
-print("--------------------")
-print(f"Total Votes: {total_votes}") 
-print("---------------------")
-print(f"Khan: {percent_of_votes_for_Khan}% ({votes_for_Khan}) ")
-print(f"Correy: {percent_of_votes_for_Correy}% ({votes_for_Correy}) ")
-print(f"Li: {percent_of_votes_for_Li}% ({votes_for_Li}) ")
-print(f"O'Tooley: {percent_of_votes_for_OTooley}% ({votes_for_OTooley}) ")
-print('----------------------')
-print(f"Winner: {winner}")
-print('----------------------')
+#print("Election Results")
+#print("--------------------")
+#print(f"Total Votes: {total_votes}") 
+#print("---------------------")
+#print(f"Khan: {percent_of_votes_for_Khan}% ({votes_for_Khan}) ")
+#print(f"Correy: {percent_of_votes_for_Correy}% ({votes_for_Correy}) ")
+#print(f"Li: {percent_of_votes_for_Li}% ({votes_for_Li}) ")
+#print(f"O'Tooley: {percent_of_votes_for_OTooley}% ({votes_for_OTooley}) ")
+#print('----------------------')
+#print(f"Winner: {winner}")
+#print('----------------------')
+
+output_file = os.path.join('C:\\Users\\loren\\Desktop\\python-challenge\\PyPoll\\analysis\\results.txt')
+with open(output_file, "w") as text:
+    #text.write('testing')
+    text.write('Election Results\n')
+    text.write('-----------------------\n')
+    text.write(f'Total Votes: {total_votes}\n')
+    text.write('-----------------------\n')
+    text.write(f"Khan: {percent_of_votes_for_Khan}% ({votes_for_Khan})\n ")
+    text.write(f"Correy: {percent_of_votes_for_Correy}% ({votes_for_Correy})\n ")
+    text.write(f"Li: {percent_of_votes_for_Li}% ({votes_for_Li})\n ")
+    text.write(f"O'Tooley: {percent_of_votes_for_OTooley}% ({votes_for_OTooley})\n ")
+    text.write('------------------------\n')
+    text.write(f"Winner: {winner}\n")
+    text.write('------------------------')
+
+
+
+
+
 
 
