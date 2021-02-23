@@ -20,6 +20,8 @@ I analyzed the financial records for PyBank and analyzed the votes for PyPoll.
 
   * The greatest decrease in losses (date and amount) over the entire period
 
+![](images/financial.png)
+
 
 ## PyPoll
 
@@ -33,7 +35,9 @@ I analyzed the financial records for PyBank and analyzed the votes for PyPoll.
 
   * The total number of votes each candidate won
 
-  * The winner of the election based on popular vote.
+  * The winner of the election based on popular vote
+
+  ![](images/election.png)
 
 - - -
 The data is provided by UCSD Extension: Data Science and Visualization Bootcamp.
